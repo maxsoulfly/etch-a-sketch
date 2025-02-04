@@ -1,8 +1,11 @@
 #container {
+    padding: 1rem;
     display: flex;
     flex-wrap: wrap;
-    width: 640px; /* Adjust as needed */
-    height: 640px; /* Adjust as needed */
+    width: 85vw; /* Adjust as needed */
+    height: 85vw; /* Adjust as needed */
+    max-width: 640px;
+    max-height: 640px;
     justify-content: center;
     align-content: center;
 
@@ -28,4 +31,9 @@
 .painted:hover {
     
     background-color: #117864;
+}
+
+
+#resize {
+    margin: 1rem;
 }
