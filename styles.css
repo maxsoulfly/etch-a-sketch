@@ -17,7 +17,6 @@
     background: #e8f8f5;
     border: 1px solid black;
     box-sizing: border-box; /* Ensures border doesn't mess up sizing */
-    
 }
 
 .grid-item:hover {
