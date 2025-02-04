@@ -6,8 +6,8 @@ A JavaScript implementation of the classic Etch-a-Sketch toy. This project is pa
 
 - Interactive grid-based drawing
 - Customizable grid size
-- Color options
-- Clear/reset functionality
+- Color options *(Coming soon)*
+- Clear/reset functionality *(Coming soon)*
 
 ## Technologies
 
@@ -23,7 +23,7 @@ A JavaScript implementation of the classic Etch-a-Sketch toy. This project is pa
 
 ## Live Demo
 
-[View Live Demo](#) *(Coming soon)*
+[View Live Demo](#https://maxsoulfly.github.io/etch-a-sketch/) 
 
 ## Contributing
 
