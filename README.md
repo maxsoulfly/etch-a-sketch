@@ -23,7 +23,7 @@ A JavaScript implementation of the classic Etch-a-Sketch toy. This project is pa
 
 ## Live Demo
 
-[View Live Demo](#https://maxsoulfly.github.io/etch-a-sketch/) 
+[View Live Demo](https://maxsoulfly.github.io/etch-a-sketch/) 
 
 ## Contributing
 
