@@ -59,21 +59,21 @@ button {
 .level-1 {
     background-color: #84A562;
 }
-.level-1:hover {
+/* .level-1:hover {
     background-color: #395941;
-}
+} */
 .level-2 {
     background-color: #395941;
 }
-.level-2:hover {
+/* .level-2:hover {
     background-color: #212521;
-}
+} */
 .level-3 {
     background-color: #212521;
 }
-.level-3:hover {
+/* .level-3:hover {
     background-color: #395941;
-}
+} */
 
 
 
