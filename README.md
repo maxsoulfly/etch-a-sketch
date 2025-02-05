@@ -6,8 +6,8 @@ A JavaScript implementation of the classic Etch-a-Sketch toy. This project is pa
 
 - Interactive grid-based drawing
 - Customizable grid size
-- Color options *(Coming soon)*
-- Clear/reset functionality *(Coming soon)*
+- OG Game Boy Color options
+- Clear/reset functionality 
 
 ## Technologies
 
