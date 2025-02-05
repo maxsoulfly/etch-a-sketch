@@ -1,3 +1,28 @@
+body {
+    background-color: #C4C7BA;
+    color: #212521;
+    font-family: Chicago FLF, monospace;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    background-color: #84A562;
+    color: #212521;
+    font-family: Chicago FLF, monospace;
+    border-color: #212521;
+}
+
 #container {
     padding: 1rem;
     display: flex;
@@ -14,24 +39,77 @@
 .grid-item {
     width: calc(100% / 16) ; /* Each item is 1/16th of the width */
     height: calc(100% / 16); /* Keep it square */
-    background: #e8f8f5;
-    border: 1px solid black;
+    background: #B5DC84;
+    border: 1px solid #C4C7BA ;
     box-sizing: border-box; /* Ensures border doesn't mess up sizing */
 }
 
 .grid-item:hover {
-    background-color: #a3e4d7;
+    background-color: #84A562;
+    cursor: pointer;
 }
 
 .painted {
-    background-color: #0e6251;
+    background-color: #212521;
 }
-
 .painted:hover {
     background-color: #117864;
 }
 
+.level-1 {
+    background-color: #84A562;
+}
+.level-1:hover {
+    background-color: #395941;
+}
+.level-2 {
+    background-color: #395941;
+}
+.level-2:hover {
+    background-color: #212521;
+}
+.level-3 {
+    background-color: #212521;
+}
+.level-3:hover {
+    background-color: #395941;
+}
+
+
 
 #resize {
     margin: 1rem;
+}
+
+#sliderContainer {
+    padding: 1rem;
+    display: flex;
+    max-width: 640px;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+#gridSizeSlider {
+    -webkit-appearance: none; /* Removes default styling (Safari/Chrome) */
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    background: #ddd; /* Change the track color */
+    border-radius: 4px;
+    outline: none;
+
+
+    width: 50%;
+    display: flex;
+    background: #84A562;
+}
+
+#gridSizeSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #212521; /* Change the thumb color */
+    border-radius: 50%;
+    cursor: pointer;
 }

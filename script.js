@@ -1,6 +1,7 @@
 const container = document.querySelector('#container');
 const resize = document.querySelector('#resize');
 const slider = document.getElementById('gridSizeSlider');
+const sliderContainer = document.getElementById('sliderContainer');
 const valueDisplay = document.getElementById('gridSizeValue');
 
 let gridSize = 16;
@@ -12,6 +13,13 @@ slider.addEventListener('input', () => {
 });
 
 
+/**
+ * updateGrid
+ * 
+ * Clears the existing grid and creates a new grid with the specified size.
+ * 
+ * @param {*} size 
+ */
 const updateGrid = (size) => {
 
     container.innerHTML = ''; // Clear existing grid
@@ -21,29 +29,44 @@ const updateGrid = (size) => {
   }
 
 /**
+ * createGrid
+ * 
+ * Creates a new grid with the specified size.
  * 
  */
 const createGrid = () => {
-    // for loops to create grid
+    // create grid
     for(let x = 0; x < gridSize; x++) {
         for(let y = 0; y < gridSize; y++) {
 
+            // create grid item
             let item = document.createElement('div');
             item.classList.add("grid-item");
             item.id = `grid-item-${x}-${y}`;
 
-            
-            // container
-            // container.style.width = gridSize*gridSize + "px";
-            // container.style.height = gridSize*gridSize + "px";
-
             // grid-item
             item.style.width = `calc(100% / ${gridSize})`;
             item.style.height = `calc(100% / ${gridSize})`;
-            // resizeElements(div);
 
+            // grid item function
             item.addEventListener('click', ()=>{
-                item.classList.toggle('painted');
+                // console.log(item.classList);
+                
+                if(item.classList.contains('level-1')) {
+                    item.classList.toggle('level-1');
+                    item.classList.add('level-2');
+                }
+                else if(item.classList.contains('level-2')) {
+                    item.classList.toggle('level-2');
+                    item.classList.add('level-3');
+                }
+                else if(item.classList.contains('level-3')) {
+                    item.classList.toggle('level-3');
+                }
+                else {
+                    item.classList.toggle('level-1'); 
+                }
+                
             });
 
             container.appendChild(item);
@@ -52,6 +75,9 @@ const createGrid = () => {
 }
 
 /**
+ * resizeElements
+ * 
+ * Resizes the grid container and grid items.
  * 
  */
 const resizeElements = (gridItem) => {
@@ -65,25 +91,22 @@ const resizeElements = (gridItem) => {
 }
 
 /**
+ * addResetButton
+ * 
+ * Adds a reset button to the slider container.
  * 
  */
-const createResizeArea = () => {
-    const p = document.createElement('p');
-    p.textContent = 'Change number of squares per side';
-    const input = document.createElement('input');
+const addResetButton = () => {
 
     const button = document.createElement('button');
-    button.textContent = 'Click To Resize';
+    button.textContent = 'Clear Grid';
 
     button.addEventListener('click', () => {
-        let newSize = parseInt(input.textContent);
-        gridSize = newSize > 100 ? newSize : 100;
-        createGrid(gridSize);
+        updateGrid(gridSize);
     });
 
-    resize.appendChild(p);
-    resize.appendChild(input);
-    resize.appendChild(button);
+    sliderContainer.appendChild(button);
 }
 
 updateGrid(gridSize);
+addResetButton();
